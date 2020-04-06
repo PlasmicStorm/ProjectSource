@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "291d4f2c-af26-435e-bf57-04dfd645d2ac",
+            "Value": {
+                "id": "9694d833-cdd2-4caf-afcd-286e7051703d",
+                "resourcePath": "tilesets\\ts_basic_tiles\\ts_basic_tiles.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "344219b1-bc2d-496a-9cf5-ca2076e9a89e",
             "Value": {
                 "id": "ad0ad168-5ec4-462a-bcf4-b8b87998a983",
@@ -79,6 +87,14 @@
             }
         },
         {
+            "Key": "35b52714-3536-49cd-91b8-ce83f28b46da",
+            "Value": {
+                "id": "0a0af20e-b9af-4290-9f4d-33d83f8c2754",
+                "resourcePath": "views\\35b52714-3536-49cd-91b8-ce83f28b46da.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "38583c2e-d644-4e4e-863c-9271ac4b0e57",
             "Value": {
                 "id": "9d2815e8-4412-4c73-9536-24c9ea34d0ac",
@@ -90,7 +106,7 @@
             "Key": "3a250854-dad8-4cc1-b7d1-ec11d671c9fa",
             "Value": {
                 "id": "c4352a92-4b87-4e47-9a0f-356e687374d0",
-                "resourcePath": "sprites\\sp_player_walk\\sp_player_walk.yy",
+                "resourcePath": "sprites\\spr_player_walk\\spr_player_walk.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -170,7 +186,7 @@
             "Key": "c995454b-f9ab-45af-ab7e-1f167cd2c5c4",
             "Value": {
                 "id": "e43b1443-b483-43ab-bc67-74cb1c58ef92",
-                "resourcePath": "sprites\\sp_player_roll\\sp_player_roll.yy",
+                "resourcePath": "sprites\\spr_player_roll\\spr_player_roll.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -191,10 +207,18 @@
             }
         },
         {
+            "Key": "dedb9803-de77-47d8-8d2b-4500347ec0bb",
+            "Value": {
+                "id": "b06265e2-6b31-4d09-9981-b4088dafe406",
+                "resourcePath": "sprites\\spr_basic_tiles\\spr_basic_tiles.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e47b4a80-79e1-4669-b726-fab6398c85b0",
             "Value": {
                 "id": "ef89f3b9-8d99-4cda-94ed-8b1b05df9286",
-                "resourcePath": "objects\\o_player\\o_player.yy",
+                "resourcePath": "objects\\obj_player\\obj_player.yy",
                 "resourceType": "GMObject"
             }
         },

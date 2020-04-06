@@ -2,7 +2,7 @@
     "id": "c995454b-f9ab-45af-ab7e-1f167cd2c5c4",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sp_player_roll",
+    "name": "spr_player_roll",
     "For3D": false,
     "HTile": false,
     "VTile": false,
