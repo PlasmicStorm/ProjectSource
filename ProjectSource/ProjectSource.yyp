@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "205bbb3c-76ca-4d10-9525-c38c0cab8d65",
+            "Value": {
+                "id": "9aaf3e27-0134-49b0-9639-64f04da31f41",
+                "resourcePath": "objects\\obj_depth_sorter\\obj_depth_sorter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "291d4f2c-af26-435e-bf57-04dfd645d2ac",
             "Value": {
                 "id": "9694d833-cdd2-4caf-afcd-286e7051703d",
@@ -107,6 +115,14 @@
             "Value": {
                 "id": "c4352a92-4b87-4e47-9a0f-356e687374d0",
                 "resourcePath": "sprites\\spr_player_walk\\spr_player_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "41d1bd32-8c21-44dd-a8dc-c11eaa3887f1",
+            "Value": {
+                "id": "9b873f3f-709f-4a38-9ba4-5bd2f184fa9d",
+                "resourcePath": "sprites\\spr_torch\\spr_torch.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -191,6 +207,14 @@
             }
         },
         {
+            "Key": "cb077b8c-1eeb-40e0-a3bb-683ba9df20c7",
+            "Value": {
+                "id": "66efefd1-4ed3-4b91-943b-1bb52499402a",
+                "resourcePath": "objects\\obj_torch\\obj_torch.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "0f7fbff6-6f70-43ca-892f-68f1e4cc4b1d",
@@ -219,6 +243,14 @@
             "Value": {
                 "id": "ef89f3b9-8d99-4cda-94ed-8b1b05df9286",
                 "resourcePath": "objects\\obj_player\\obj_player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f3bd8dd5-ec08-435e-bb70-f2262f351c84",
+            "Value": {
+                "id": "b80d9255-4bdb-4348-9f7e-e24eb95b41d8",
+                "resourcePath": "objects\\par_depth_object\\par_depth_object.yy",
                 "resourceType": "GMObject"
             }
         },

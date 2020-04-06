@@ -4,12 +4,21 @@
     "mvc": "1.0",
     "name": "obj_player",
     "eventList": [
-        
+        {
+            "id": "1b331f95-d75b-4a50-940f-f9e132be9d83",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "e47b4a80-79e1-4669-b726-fab6398c85b0"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": true,
+    "parentObjectId": "f3bd8dd5-ec08-435e-bb70-f2262f351c84",
+    "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,
@@ -53,7 +62,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "6d38a7dd-9cbc-4bbe-95c6-1580dfe13df9",
+            "id": "bd792784-a456-42e0-a5b1-2718fbdcd025",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -62,12 +71,26 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "1",
-            "varName": "x_dir",
-            "varType": 1
+            "value": "0",
+            "varName": "x_speed",
+            "varType": 0
+        },
+        {
+            "id": "016b55a7-13f3-4f4a-94e8-2c88d3087e7f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "y_speed",
+            "varType": 0
         }
     ],
-    "solid": false,
+    "solid": true,
     "spriteId": "3a250854-dad8-4cc1-b7d1-ec11d671c9fa",
-    "visible": true
+    "visible": false
 }
