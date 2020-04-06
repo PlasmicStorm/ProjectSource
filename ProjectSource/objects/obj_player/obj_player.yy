@@ -13,9 +13,29 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "e47b4a80-79e1-4669-b726-fab6398c85b0"
+        },
+        {
+            "id": "82099f18-4f85-498d-8537-e5c8060af01a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "e47b4a80-79e1-4669-b726-fab6398c85b0"
+        },
+        {
+            "id": "78d75c29-5f62-41d8-92ce-fe7c0d045f9a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 7,
+            "eventtype": 7,
+            "m_owner": "e47b4a80-79e1-4669-b726-fab6398c85b0"
         }
     ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "maskSpriteId": "fcb4379c-ed0e-4e7d-84ed-a6f38416be41",
     "overriddenProperties": null,
     "parentObjectId": "f3bd8dd5-ec08-435e-bb70-f2262f351c84",
     "persistent": false,
@@ -62,7 +82,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "bd792784-a456-42e0-a5b1-2718fbdcd025",
+            "id": "a4ecaf06-77b5-4f8b-9fbe-6107076b0a9a",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -71,12 +91,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
-            "varName": "x_speed",
+            "value": "0.3",
+            "varName": "x_speed_multiply",
             "varType": 0
         },
         {
-            "id": "016b55a7-13f3-4f4a-94e8-2c88d3087e7f",
+            "id": "6cce5331-84a1-449e-ac17-761b587c9015",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -85,8 +105,8 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
-            "varName": "y_speed",
+            "value": "0.2",
+            "varName": "y_speed_multiply",
             "varType": 0
         }
     ],
