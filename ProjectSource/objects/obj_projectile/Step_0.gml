@@ -1,3 +1,4 @@
 /// @description move bullet and check collision
 
-part_particles_create(obj_particle_system1.particle_system1, x, y, obj_particle_system1.particle1, 1);
+obj_particle_system0.particle_type = 1;
+part_particles_create(obj_particle_system0.particle_system0, x, y, obj_particle_system0.particle1, 1);

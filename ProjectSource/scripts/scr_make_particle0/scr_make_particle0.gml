@@ -5,6 +5,8 @@ var yy = argument1 - 6;
 var amount = argument2
 var range = 5;
 
+obj_particle_system0.particle_type = 0;
+
 repeat(amount)
 {
 	part_particles_create(	obj_particle_system0.particle_system0, 

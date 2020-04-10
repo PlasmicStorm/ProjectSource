@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "198ee82b-587c-4639-93d5-41a869535acc",
+            "Value": {
+                "id": "3667a2da-1ab4-4ee7-af81-30b2fb9af408",
+                "resourcePath": "objects\\obj_collision\\obj_collision.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "19dea300-d556-44b9-b80b-ff53c9bb498c",
             "Value": {
                 "id": "f2444685-3de1-47b9-96ab-a8d14f2aade8",
@@ -287,6 +295,14 @@
             }
         },
         {
+            "Key": "d326765e-4e41-421e-bb45-ace9351a0ab1",
+            "Value": {
+                "id": "d0bacb3a-3c5f-43ca-a39e-7ed15c90251b",
+                "resourcePath": "sprites\\spr_slime_dev\\spr_slime_dev.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ddc5a3c6-3c11-4d00-ac05-4447552a9de7",
             "Value": {
                 "id": "8c1943e1-7d40-4ef2-a2bb-232fb5141f4d",
@@ -307,6 +323,22 @@
             "Value": {
                 "id": "ef89f3b9-8d99-4cda-94ed-8b1b05df9286",
                 "resourcePath": "objects\\obj_player\\obj_player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e69d4d9f-4eea-48d1-991c-83bbe51abe10",
+            "Value": {
+                "id": "96748752-c206-475c-ae75-3af2907b7dcd",
+                "resourcePath": "objects\\obj_particle_system1\\obj_particle_system1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f182d654-1cff-4d57-8adf-bcd006a9ee2d",
+            "Value": {
+                "id": "a3e3be40-ee99-418b-8c57-c1c75e17cd4f",
+                "resourcePath": "objects\\obj_slime_dev\\obj_slime_dev.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -332,14 +364,6 @@
                 "id": "f65ae6ed-43d1-4b05-a387-f7ba201a782c",
                 "resourcePath": "scripts\\scr_make_particle0\\scr_make_particle0.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "f7072fd1-7783-41af-84ad-fc5b81ee7ffb",
-            "Value": {
-                "id": "303c4789-8669-47a8-93c0-9f64382e0b3c",
-                "resourcePath": "objects\\obj_particle_system1\\obj_particle_system1.yy",
-                "resourceType": "GMObject"
             }
         },
         {

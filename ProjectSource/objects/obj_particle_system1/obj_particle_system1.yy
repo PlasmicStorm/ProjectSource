@@ -1,28 +1,28 @@
 {
-    "id": "f7072fd1-7783-41af-84ad-fc5b81ee7ffb",
+    "id": "e69d4d9f-4eea-48d1-991c-83bbe51abe10",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "obj_particle_system1",
     "eventList": [
         {
-            "id": "8f6926f9-848d-46e0-8e99-a48062f9879b",
+            "id": "073d6728-0975-455d-a5fe-9cf894b119dc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "f7072fd1-7783-41af-84ad-fc5b81ee7ffb"
+            "m_owner": "e69d4d9f-4eea-48d1-991c-83bbe51abe10"
         },
         {
-            "id": "d1e268c4-6231-471b-8c28-9e1714cd53b2",
+            "id": "2c429951-5cf7-4361-9f3e-50846ffbb3a6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 3,
             "eventtype": 7,
-            "m_owner": "f7072fd1-7783-41af-84ad-fc5b81ee7ffb"
+            "m_owner": "e69d4d9f-4eea-48d1-991c-83bbe51abe10"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -41,7 +41,9 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        
+    ],
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
