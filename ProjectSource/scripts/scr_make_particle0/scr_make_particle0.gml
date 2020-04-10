@@ -1,7 +1,7 @@
-///make_particle0(x, y, amount)
+///make_particle(x, y, amount)
 
 var xx = argument0;
-var yy = argument1;
+var yy = argument1 - 6;
 var amount = argument2
 var range = 5;
 
