@@ -1,14 +1,14 @@
 {
-    "id": "cb077b8c-1eeb-40e0-a3bb-683ba9df20c7",
+    "id": "a64c62cc-663b-49db-b3c7-712c4c7d9bfc",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_torch",
+    "name": "obj_collision_box",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "8909c5b8-a8de-43b8-8f3d-215d45c1d1d8",
+    "parentObjectId": "198ee82b-587c-4639-93d5-41a869535acc",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": true,
-    "spriteId": "41d1bd32-8c21-44dd-a8dc-c11eaa3887f1",
-    "visible": true
+    "spriteId": "14eeb9e7-8254-475b-8549-b26b6ada6c42",
+    "visible": false
 }

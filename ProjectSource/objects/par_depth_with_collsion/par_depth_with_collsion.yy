@@ -1,14 +1,14 @@
 {
-    "id": "cb077b8c-1eeb-40e0-a3bb-683ba9df20c7",
+    "id": "8909c5b8-a8de-43b8-8f3d-215d45c1d1d8",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_torch",
+    "name": "par_depth_with_collsion",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "8909c5b8-a8de-43b8-8f3d-215d45c1d1d8",
+    "parentObjectId": "198ee82b-587c-4639-93d5-41a869535acc",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -23,7 +23,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": null,
-    "solid": true,
-    "spriteId": "41d1bd32-8c21-44dd-a8dc-c11eaa3887f1",
+    "solid": false,
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

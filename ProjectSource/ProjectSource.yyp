@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "02e2db65-d472-4512-8164-4b4555e7218b",
+            "Value": {
+                "id": "4636f37c-0ca6-4fbc-aeb9-d57f8338622d",
+                "resourcePath": "views\\02e2db65-d472-4512-8164-4b4555e7218b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "06507f9a-cda2-483c-bf56-28c274e56621",
             "Value": {
                 "id": "e3f3b970-b633-42c9-8a9d-bc042c5245d6",
@@ -43,6 +51,14 @@
             "Value": {
                 "id": "870a136e-9afc-4274-9ece-057c19b4bae0",
                 "resourcePath": "sprites\\spr_player_walk_back\\spr_player_walk_back.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "14eeb9e7-8254-475b-8549-b26b6ada6c42",
+            "Value": {
+                "id": "23332e3b-8cf1-474a-8fe8-5cfb08c55240",
+                "resourcePath": "sprites\\spr_collsion_box\\spr_collsion_box.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -183,6 +199,14 @@
             }
         },
         {
+            "Key": "62597ac8-5928-4f6d-9e97-71957fe8bc6d",
+            "Value": {
+                "id": "ffb47c6c-40b0-4eb7-92ec-d1226481a330",
+                "resourcePath": "shaders\\shd_outline\\shd_outline.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "73c2a1ed-6cdd-43cb-b007-caecbba8d4a5",
             "Value": {
                 "id": "79e4ece8-0343-4fca-8bbf-3484c229efaf",
@@ -204,6 +228,14 @@
                 "id": "0ed5e881-ed35-4777-92c3-c6c71b3537d5",
                 "resourcePath": "views\\87364809-d80a-41c8-905e-6acdf5612d18.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8909c5b8-a8de-43b8-8f3d-215d45c1d1d8",
+            "Value": {
+                "id": "953adf26-26d9-477c-8bbc-178d2b65e61d",
+                "resourcePath": "objects\\par_depth_with_collsion\\par_depth_with_collsion.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -243,6 +275,14 @@
             "Value": {
                 "id": "8152d40d-b84a-4b96-a6b5-ce6994a80391",
                 "resourcePath": "objects\\obj_particle_system0\\obj_particle_system0.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a64c62cc-663b-49db-b3c7-712c4c7d9bfc",
+            "Value": {
+                "id": "264e751a-561a-495f-b20e-69b564b5999e",
+                "resourcePath": "objects\\obj_collision_box\\obj_collision_box.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -303,6 +343,14 @@
             }
         },
         {
+            "Key": "d8a68c6a-d031-49e1-9317-4a06860ac9b3",
+            "Value": {
+                "id": "7d49f310-5706-4497-8cab-21bd02aee2ea",
+                "resourcePath": "shaders\\shd_passthrough\\shd_passthrough.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "ddc5a3c6-3c11-4d00-ac05-4447552a9de7",
             "Value": {
                 "id": "8c1943e1-7d40-4ef2-a2bb-232fb5141f4d",
@@ -316,6 +364,14 @@
                 "id": "b06265e2-6b31-4d09-9981-b4088dafe406",
                 "resourcePath": "sprites\\spr_basic_tiles\\spr_basic_tiles.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e1e05988-8581-4d33-a9df-d3a4227ddabf",
+            "Value": {
+                "id": "0f4cf960-71ae-497d-871d-647420e0b402",
+                "resourcePath": "objects\\obj_debug_gui\\obj_debug_gui.yy",
+                "resourceType": "GMObject"
             }
         },
         {

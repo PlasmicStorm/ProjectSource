@@ -1,13 +1,18 @@
 /// @description sort objects by Y coordinate and draw them in order
-
 //resize grid
 var dgrid = ds_depthgrid;
-var inst_num = instance_number(par_depth_object);
+var inst_num = instance_number(par_depth_object) + instance_number(par_depth_with_collsion);
 ds_grid_resize(dgrid, 2, inst_num);
 
 //add all instances to grid
 var yy = 0; 
 with(par_depth_object)
+{
+	dgrid[# 0, yy] = id;
+	dgrid[# 1, yy] = y;
+	yy++;
+}
+with(par_depth_with_collsion)
 {
 	dgrid[# 0, yy] = id;
 	dgrid[# 1, yy] = y;
@@ -22,10 +27,6 @@ yy = 0;
 repeat(inst_num)
 {
 	inst = dgrid[# 0, yy];
-	
-	with(inst)
-	{
-		draw_self();
-	}
+	inst.depth = 299- yy;
 	yy++;
 }
