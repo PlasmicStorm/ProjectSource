@@ -13,17 +13,18 @@ surface_set_target(srf_lights);
 	gpu_set_blendmode(bm_add);
 	gpu_set_tex_filter(true);
 	
-	var lights_strength = 0.5;
+	var lights_strength = 1.0;
 	var vx = camera_get_view_x(view_camera[0]);
 	var vy = camera_get_view_y(view_camera[0]);
 	//draw all light instances 
 	with(par_lights)
 		draw_sprite_ext(sprite_index, image_index, x - vx, y - vy, image_xscale, image_yscale, image_angle, image_blend, image_alpha * lights_strength);
-		
+	
 	//reset gpu
 	gpu_set_tex_filter(false);
 	gpu_set_blendmode(bm_normal);
 surface_reset_target();
+
 
 //Draw with shader enabled
 shader_set(shd_colour);
@@ -33,3 +34,6 @@ shader_set(shd_colour);
 	if(surface_exists(application_surface))
 		draw_surface_ext(application_surface, 0, 0, 1, 1, 0, c_white, 1);
 shader_reset();
+
+//debug lighting surface
+	draw_surface_ext(srf_lights,0 ,0 ,1, 1, 0, c_white, 1);
