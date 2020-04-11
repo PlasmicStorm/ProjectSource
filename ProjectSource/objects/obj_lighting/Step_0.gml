@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Calculate shader values
 
 time += 0.001;
 if(time >= 1)
@@ -16,5 +16,8 @@ colour_mix[0]	= lerp(colour[key_previous,0], colour[key_next,0], lerp_amt);
 colour_mix[1]	= lerp(colour[key_previous,1], colour[key_next,1], lerp_amt);
 colour_mix[2]	= lerp(colour[key_previous,2], colour[key_next,2], lerp_amt);
 
-show_debug_message("values:");
-show_debug_message(string(time));
+con_sat_brt_mix[0] = lerp(con_sat_brt[key_previous,0], con_sat_brt[key_next,0], lerp_amt);
+con_sat_brt_mix[1] = lerp(con_sat_brt[key_previous,1], con_sat_brt[key_next,1], lerp_amt);
+con_sat_brt_mix[2] = lerp(con_sat_brt[key_previous,2], con_sat_brt[key_next,2], lerp_amt);
+con_sat_brt_mix[3] = lerp(con_sat_brt[key_previous,3], con_sat_brt[key_next,3], lerp_amt);
+con_sat_brt_mix[4] = lerp(con_sat_brt[key_previous,4], con_sat_brt[key_next,4], lerp_amt);

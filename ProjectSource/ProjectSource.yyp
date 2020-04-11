@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "23482dd1-a88c-429f-98dd-db167295f520",
+            "Value": {
+                "id": "82d34f74-9ab9-43d6-9458-d6d41eb0dbb1",
+                "resourcePath": "shaders\\shd_colour\\shd_colour.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "291d4f2c-af26-435e-bf57-04dfd645d2ac",
             "Value": {
                 "id": "9694d833-cdd2-4caf-afcd-286e7051703d",
@@ -231,14 +239,6 @@
             }
         },
         {
-            "Key": "62597ac8-5928-4f6d-9e97-71957fe8bc6d",
-            "Value": {
-                "id": "ffb47c6c-40b0-4eb7-92ec-d1226481a330",
-                "resourcePath": "shaders\\shd_outline\\shd_outline.yy",
-                "resourceType": "GMShader"
-            }
-        },
-        {
             "Key": "73c2a1ed-6cdd-43cb-b007-caecbba8d4a5",
             "Value": {
                 "id": "79e4ece8-0343-4fca-8bbf-3484c229efaf",
@@ -335,19 +335,27 @@
             }
         },
         {
-            "Key": "abe6c0cf-84d0-4be0-9e62-9575b7cbc70e",
-            "Value": {
-                "id": "1a67d56b-dc44-498f-81c0-28028fe4a0c7",
-                "resourcePath": "shaders\\shd_colour\\shd_colour.yy",
-                "resourceType": "GMShader"
-            }
-        },
-        {
             "Key": "bdedf18b-ef6d-45aa-9d4c-263b8fbd3164",
             "Value": {
                 "id": "01bdb8e1-6e10-41d2-81ac-8773ea8bc882",
                 "resourcePath": "views\\bdedf18b-ef6d-45aa-9d4c-263b8fbd3164.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "be09ce62-cdd1-4351-bf61-3c9d413ff3d0",
+            "Value": {
+                "id": "dc5100ad-6c24-4e43-ab84-03fd7633c2e4",
+                "resourcePath": "objects\\par_lights\\par_lights.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c1a1fc55-425d-422d-be41-baa41f0f84ce",
+            "Value": {
+                "id": "23687037-af58-4062-b0d8-7b3200ae3908",
+                "resourcePath": "sprites\\spr_light_torch_blue\\spr_light_torch_blue.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -443,6 +451,14 @@
             "Value": {
                 "id": "96748752-c206-475c-ae75-3af2907b7dcd",
                 "resourcePath": "objects\\obj_particle_system1\\obj_particle_system1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ed7b9f8f-bc96-428e-bd37-a8cb7b02f6a4",
+            "Value": {
+                "id": "c87aa907-66dd-4f15-b46f-da740f4b1671",
+                "resourcePath": "objects\\obj_torch_light\\obj_torch_light.yy",
                 "resourceType": "GMObject"
             }
         },

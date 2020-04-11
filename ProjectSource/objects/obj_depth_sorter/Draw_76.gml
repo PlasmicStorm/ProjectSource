@@ -27,6 +27,6 @@ yy = 0;
 repeat(inst_num)
 {
 	inst = dgrid[# 0, yy];
-	inst.depth = 299- yy;
+	inst.depth = 399- yy;
 	yy++;
 }

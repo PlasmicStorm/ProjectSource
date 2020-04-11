@@ -1,14 +1,19 @@
 /// @description Insert description here
 
+
+//check if alive
 if(hp < 1)
 {
 	part_particles_create(obj_particle_system1.particle_system0, x, y, obj_particle_system1.particle0, 20);
 	instance_destroy();
 }
 
+//decrease move speed
 path_speed = path_speed * 0.9;
 slime_cooldown	-= sign(slime_cooldown);
 
+
+//Pathfinding
 if(slime_cooldown == 0)
 {
 	slime_cooldown = 100;

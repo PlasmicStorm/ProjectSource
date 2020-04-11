@@ -1,5 +1,5 @@
 {
-    "id": "abe6c0cf-84d0-4be0-9e62-9575b7cbc70e",
+    "id": "23482dd1-a88c-429f-98dd-db167295f520",
     "modelName": "GMShader",
     "mvc": "1.0",
     "name": "shd_colour",
