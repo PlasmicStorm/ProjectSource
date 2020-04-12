@@ -1,6 +1,7 @@
 //
 // Simple passthrough fragment shader
 //
+
 varying vec2 v_vTexcoord;
 //varying vec4 v_vColour;
 
@@ -36,7 +37,7 @@ void main()
 	vec3 lights_col = texture2D(lights, v_vTexcoord).rgb;
 	grey			= dot(lights_col, vec3(0.333));
 	out_col			= mix(out_col, base_col * normalize(lights_col + 0.05) * 3.0, grey);
-	out_col		   += 0.1 * lights_col;
+	//out_col		   += 0.1 * lights_col;
 	
 	gl_FragColor	= vec4(out_col, 1.0);
 }

@@ -71,7 +71,7 @@
             "blendMode": 0,
             "isLocked": false,
             "name": "Layer 4",
-            "opacity": 100,
+            "opacity": 60,
             "visible": true
         },
         {
@@ -82,7 +82,7 @@
             "blendMode": 0,
             "isLocked": false,
             "name": "Layer 3",
-            "opacity": 50,
+            "opacity": 30,
             "visible": true
         },
         {
@@ -93,7 +93,7 @@
             "blendMode": 0,
             "isLocked": false,
             "name": "Layer 2",
-            "opacity": 26,
+            "opacity": 15,
             "visible": true
         },
         {
@@ -108,7 +108,7 @@
             "visible": true
         }
     ],
-    "origin": 9,
+    "origin": 4,
     "originLocked": false,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
@@ -119,6 +119,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 64,
-    "xorig": -40,
-    "yorig": 24
+    "xorig": 32,
+    "yorig": 32
 }
