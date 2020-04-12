@@ -17,7 +17,7 @@ x_speed += x_dir;
 //Check if player is alive
 if(hp <= 0)
 {
-	
+	scr_death();
 	instance_destroy();
 }
 
@@ -53,8 +53,7 @@ if(0 != sign(x_speed))
 //Animate dodgeroll
 if(move_dodge) 
 {
-	scr_make_particle0(x, y + 5, 10);
-	
+	invincible = true;
 	//set roll animation depending on dir
 	if(abs(y_dir))
 		sprite_index = spr_player_roll_front;
@@ -65,7 +64,7 @@ if(move_dodge)
 //Emit particles while in roll
 if(sprite_index == spr_player_roll_front or sprite_index == spr_player_roll_side)
 {
-	scr_make_particle0(x, y + 5, 2);
+	scr_make_particle0_0(x, y + 5, 2);
 }
 
 if(shoot) 

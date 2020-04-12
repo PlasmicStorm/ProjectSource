@@ -22,7 +22,7 @@ con_sat_brt[0,0]= undefined;
 key_previous	= -1;
 key_next		= -1;
 
-//arguments		  R	   G    B   con  sat  brt   popS  popT
+//arguments		  R	     G       B       con    sat     brt     popS    popT
 scr_add_key_time(030,	120,	225,	0.60,	1.00,  -0.20,	0.80,	0.65);	// 00h
 scr_add_key_time(040,	125,	215,	0.65,	0.90,  -0.20,	0.70,	0.65);	// 02h
 scr_add_key_time(080,	080,	185,	0.80,	0.60,  -0.15,	0.20,	0.80);	// 04h

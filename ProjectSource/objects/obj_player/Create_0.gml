@@ -7,6 +7,7 @@ bullet_cooldown = 0;
 x_speed_multiply = 0.3;
 y_speed_multiply = 0.2;
 
-max_hp			= 20;
+invincible		= false;
+max_hp			= 2;
 hp				= max_hp;
 damage_cooldown	= 0;

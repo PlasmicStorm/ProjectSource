@@ -17,13 +17,14 @@ slime_cooldown	-= sign(slime_cooldown);
 if(slime_cooldown == 0)
 {
 	slime_cooldown = 100;
-	mp_potential_path_object(target_path, obj_player.x, obj_player.y, obj_collision, 1, obj_collision);
+	if(instance_exists(obj_player))
+		mp_potential_path_object(target_path, obj_player.x, obj_player.y, obj_collision, 1, obj_collision);
 	path_start(target_path, 1, path_action_stop, false);
 	path_speed = 5;
 }
 
 //Do damage
-var colliding_instance = instance_position(x, y, obj_player);
+var colliding_instance = instance_place(x, y, obj_player);
 if(colliding_instance != noone)
 {
 	with colliding_instance

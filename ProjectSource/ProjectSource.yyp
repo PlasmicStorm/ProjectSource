@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "74caa4e2-9e74-485e-adaa-2a00cc813e3a",
+            "Value": {
+                "id": "ca8016e4-ff2b-4770-a30d-17a43bf3635a",
+                "resourcePath": "scripts\\scr_death\\scr_death.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7ef6aa34-dd4e-42ff-9af4-765c84ebf946",
             "Value": {
                 "id": "22ba7106-5c41-4135-b759-84e89f445607",
@@ -514,7 +522,7 @@
             "Key": "f64b1835-c5ab-4e0b-8a91-af2d47482694",
             "Value": {
                 "id": "f65ae6ed-43d1-4b05-a387-f7ba201a782c",
-                "resourcePath": "scripts\\scr_make_particle0\\scr_make_particle0.yy",
+                "resourcePath": "scripts\\scr_make_particle0_0\\scr_make_particle0_0.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -538,7 +546,8 @@
     "script_order": [
         "f64b1835-c5ab-4e0b-8a91-af2d47482694",
         "a6cf71ab-58cd-43cb-ad0a-95f91b4dd28f",
-        "2f527a3d-5895-43e1-af0d-9aaff1cc93db"
+        "2f527a3d-5895-43e1-af0d-9aaff1cc93db",
+        "74caa4e2-9e74-485e-adaa-2a00cc813e3a"
     ],
     "tutorial": ""
 }
