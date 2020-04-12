@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "02916fc3-17dc-4aca-951d-50003651c62b",
+            "Value": {
+                "id": "a614274b-cb80-429b-8109-9357247dd661",
+                "resourcePath": "sprites\\spr_bump\\spr_bump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02e2db65-d472-4512-8164-4b4555e7218b",
             "Value": {
                 "id": "4636f37c-0ca6-4fbc-aeb9-d57f8338622d",
@@ -59,14 +67,6 @@
             "Value": {
                 "id": "870a136e-9afc-4274-9ece-057c19b4bae0",
                 "resourcePath": "sprites\\spr_player_walk_back\\spr_player_walk_back.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "0f6dad96-a534-4b49-bcdd-cae74486575d",
-            "Value": {
-                "id": "204711a2-1e6b-42e6-b698-6b9156fe1e22",
-                "resourcePath": "sprites\\sprite11\\sprite11.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -148,6 +148,14 @@
                 "id": "be8ce0a8-4a9c-4ab6-b2c2-f639651d2027",
                 "resourcePath": "views\\2dd8ff48-cb5e-4d05-bfc0-c0d09f67d6e0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2f527a3d-5895-43e1-af0d-9aaff1cc93db",
+            "Value": {
+                "id": "55fdd691-bcdd-4658-89cc-d87cc89a9f25",
+                "resourcePath": "scripts\\scr_take_damage\\scr_take_damage.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -447,6 +455,14 @@
             }
         },
         {
+            "Key": "e37c5710-deee-49e8-bee8-20b01c4ea478",
+            "Value": {
+                "id": "bb99bc0c-3ab0-4acc-9e6a-fa77673585b6",
+                "resourcePath": "shaders\\shd_distort\\shd_distort.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "e47b4a80-79e1-4669-b726-fab6398c85b0",
             "Value": {
                 "id": "ef89f3b9-8d99-4cda-94ed-8b1b05df9286",
@@ -521,7 +537,8 @@
     ],
     "script_order": [
         "f64b1835-c5ab-4e0b-8a91-af2d47482694",
-        "a6cf71ab-58cd-43cb-ad0a-95f91b4dd28f"
+        "a6cf71ab-58cd-43cb-ad0a-95f91b4dd28f",
+        "2f527a3d-5895-43e1-af0d-9aaff1cc93db"
     ],
     "tutorial": ""
 }

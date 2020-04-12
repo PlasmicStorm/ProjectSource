@@ -21,3 +21,17 @@ if(slime_cooldown == 0)
 	path_start(target_path, 1, path_action_stop, false);
 	path_speed = 5;
 }
+
+//Do damage
+var colliding_instance = instance_position(x, y, obj_player);
+if(colliding_instance != noone)
+{
+	with colliding_instance
+		scr_take_damage(1);
+}
+
+if(frame_cooldown <= 0)
+{
+	frame_cooldown = sprite_index.image_speed;
+	image_index = (image_index + 1) % sprite_get_number(sprite_index);
+}

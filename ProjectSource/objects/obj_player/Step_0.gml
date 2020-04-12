@@ -14,6 +14,14 @@ var x_dir = move_dir_right - move_dir_left;
 y_speed += y_dir;
 x_speed += x_dir;
 
+//Check if player is alive
+if(hp <= 0)
+{
+	
+	instance_destroy();
+}
+
+
 //Do dodgeroll
 if(move_dodge)
 {
@@ -71,3 +79,4 @@ if(shoot)
 
 dodge_cooldown	-= sign(dodge_cooldown);
 bullet_cooldown -= sign(bullet_cooldown);
+damage_cooldown	-= sign(damage_cooldown);
