@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "23d32904-8fab-4edc-b538-855e518173a0",
+            "Value": {
+                "id": "14d74c64-91b0-4458-90f0-b8a8ec1199a1",
+                "resourcePath": "objects\\hud_health\\hud_health.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "291d4f2c-af26-435e-bf57-04dfd645d2ac",
             "Value": {
                 "id": "9694d833-cdd2-4caf-afcd-286e7051703d",
@@ -311,6 +319,22 @@
             }
         },
         {
+            "Key": "966a6d71-6a93-4f2f-b768-149a1fca6770",
+            "Value": {
+                "id": "f9549eaf-2c72-4ed2-a0eb-a18f94c1d0ae",
+                "resourcePath": "objects\\obj_item\\obj_item.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "98c2f017-d97e-4039-b192-71bea4f3dbb7",
+            "Value": {
+                "id": "d9fa384d-7c31-4232-aaec-33663df522ec",
+                "resourcePath": "views\\98c2f017-d97e-4039-b192-71bea4f3dbb7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9f71c286-36d6-418a-a2d3-be2a4b81e0a6",
             "Value": {
                 "id": "d129ffea-0ec5-4482-bbec-2041fe05ef7e",
@@ -359,6 +383,14 @@
             }
         },
         {
+            "Key": "aa94a351-52d7-4e42-a3c9-0a1c7cc2fee7",
+            "Value": {
+                "id": "8ebfb6f0-2c87-47ac-a955-9a313ce0373e",
+                "resourcePath": "objects\\hud_item_overlay\\hud_item_overlay.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bdedf18b-ef6d-45aa-9d4c-263b8fbd3164",
             "Value": {
                 "id": "01bdb8e1-6e10-41d2-81ac-8773ea8bc882",
@@ -375,10 +407,26 @@
             }
         },
         {
+            "Key": "beed57ec-f1ee-4a81-a737-f53128ef926b",
+            "Value": {
+                "id": "a0cf06e6-9858-4974-9c22-cf9af1b89d2d",
+                "resourcePath": "sprites\\spr_health\\spr_health.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c1a1fc55-425d-422d-be41-baa41f0f84ce",
             "Value": {
                 "id": "23687037-af58-4062-b0d8-7b3200ae3908",
                 "resourcePath": "sprites\\spr_light_torch_blue\\spr_light_torch_blue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c6a8227d-e2da-422d-9a3a-33a190aaaf9a",
+            "Value": {
+                "id": "f6b39a10-55b3-43f0-af1d-bb54bd432d70",
+                "resourcePath": "sprites\\spr_book\\spr_book.yy",
                 "resourceType": "GMSprite"
             }
         },

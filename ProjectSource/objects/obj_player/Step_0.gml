@@ -73,6 +73,16 @@ if(shoot)
 	instance_create_layer(x, y, "InstanceLayer", obj_projectile);
 }
 
+var colliding_instance = instance_place(x, y, obj_item);
+if(colliding_instance != noone)
+{
+	if(ds_map_exists(items, colliding_instance.item_id))
+		ds_map_replace(items, colliding_instance.item_id, ds_map_find_value(items, colliding_instance.item_id) + 1);
+	else
+		ds_map_add(items, colliding_instance.item_id, 1);
+		instance_destroy(colliding_instance);
+}
+
 
 //Reduce cooldowns
 

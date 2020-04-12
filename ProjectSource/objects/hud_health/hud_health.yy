@@ -1,28 +1,28 @@
 {
-    "id": "032f78ca-760d-469a-bab4-2188ef67b65f",
+    "id": "23d32904-8fab-4edc-b538-855e518173a0",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_contoller",
+    "name": "hud_health",
     "eventList": [
         {
-            "id": "2591e3cf-fd03-46b1-85ee-019389107e8f",
+            "id": "fa96e4c7-588f-4a2b-a7d0-019a4f0e860e",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 4,
-            "eventtype": 7,
-            "m_owner": "032f78ca-760d-469a-bab4-2188ef67b65f"
+            "enumb": 64,
+            "eventtype": 8,
+            "m_owner": "23d32904-8fab-4edc-b538-855e518173a0"
         },
         {
-            "id": "f9f7c2d8-430b-43a0-ae5d-beaee1ded629",
+            "id": "16153c18-978f-43fc-baab-52cc33eaae49",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 122,
-            "eventtype": 9,
-            "m_owner": "032f78ca-760d-469a-bab4-2188ef67b65f"
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "23d32904-8fab-4edc-b538-855e518173a0"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
