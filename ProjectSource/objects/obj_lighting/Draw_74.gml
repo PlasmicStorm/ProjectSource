@@ -5,6 +5,7 @@ if(!surface_exists(srf_lights))
 	tex_lights = surface_get_texture(srf_lights);
 }
 
+show_debug_message(string(camera_get_view_width(view_camera[0])));
 
 //Draw blank light surface
 surface_set_target(srf_lights);
@@ -15,11 +16,11 @@ surface_set_target(srf_lights);
 	gpu_set_tex_filter(true);
 	
 	var lights_strength = 1.0;
-	var vx = camera_get_view_x(view_camera[0]);
-	var vy = camera_get_view_y(view_camera[0]);
+	var vx = view_camera[0].x;
+	var vy = view_camera[0].y;
 	//draw all light instances 
 	with(par_lights)
-		draw_sprite_ext(sprite_index, image_index, x - vx, y - vy, image_xscale, image_yscale, image_angle, image_blend, image_alpha * lights_strength);
+		draw_sprite_ext(sprite_index, image_index, x - vx + 160, y - vy + 90, image_xscale, image_yscale, image_angle, image_blend, image_alpha * lights_strength);
 	
 	//reset gpu
 	gpu_set_tex_filter(false);
@@ -37,4 +38,4 @@ shader_set(shd_colour);
 shader_reset();
 
 //debug lighting surface
-	//draw_surface_ext(srf_lights, 0, 0, 1, 1, 0, c_white, 1);
+	draw_surface_ext(srf_lights, 0, 0, 1, 1, 0, c_white, 1);

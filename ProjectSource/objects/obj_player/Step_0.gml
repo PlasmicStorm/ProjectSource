@@ -14,6 +14,14 @@ var x_dir = move_dir_right - move_dir_left;
 y_speed += y_dir;
 x_speed += x_dir;
 
+//Check if life bug triggers
+if(hp/max_hp <= 0.2 && life_bug_cooldown == 0 && scr_get_item_amount(2) != 0)
+{
+	part_particles_create(obj_particle_system1.particle_system0, x, y, obj_particle_system1.particle3, 20);
+	hp = min(scr_get_item_amount(2)/10 * max_hp, max_hp);
+	life_bug_cooldown = 360 - scr_get_item_amount(2) * 10;
+}
+
 //Check if player is alive
 if(hp <= 0)
 {
@@ -38,9 +46,9 @@ var final_y_speed = y_speed * y_speed_multiply;
 
 //Collision
 if(place_free(x + final_x_speed, y))
-		x += final_x_speed;
-	if(place_free(x, y + final_y_speed))
-		y += final_y_speed;
+	x += final_x_speed;
+if(place_free(x, y + final_y_speed))
+	y += final_y_speed;
 
 //reduce speed
 x_speed *= 0.8;
@@ -89,7 +97,7 @@ if(colliding_instance != noone)
 
 
 //Reduce cooldowns
-
-dodge_cooldown	-= sign(dodge_cooldown);
-bullet_cooldown -= sign(bullet_cooldown);
-damage_cooldown	-= sign(damage_cooldown);
+dodge_cooldown		-= sign(dodge_cooldown);
+bullet_cooldown		-= sign(bullet_cooldown);
+damage_cooldown		-= sign(damage_cooldown);
+life_bug_cooldown	-= sign(life_bug_cooldown);

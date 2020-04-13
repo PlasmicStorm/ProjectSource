@@ -19,7 +19,7 @@ draw_sprite_ext(sprite_index,
 				-1 * size * (invert ? -1 : 1),
 				0, 
 				c_black, 
-				0.5);
+				strength);
 draw_flush();
 /*
 shader_set(shd_draw_black);

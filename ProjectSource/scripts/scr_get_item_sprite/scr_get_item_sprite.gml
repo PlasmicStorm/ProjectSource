@@ -8,6 +8,9 @@ switch(argument0)
 	case 1:
 		sprite_value = spr_eye;
 		break;
+	case 2:
+		sprite_value = spr_life_bug;
+		break;
 	default:
 		sprite_value = spr_book;
 		break;

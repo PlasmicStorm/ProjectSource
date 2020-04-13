@@ -11,3 +11,4 @@ repeat(ds_grid_height(items))
 	}
 	i++;
 }
+return 0;

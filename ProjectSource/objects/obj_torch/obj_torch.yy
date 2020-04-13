@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_torch",
     "eventList": [
-        
+        {
+            "id": "495427d7-5eff-4a62-bae8-0956cbfc1e39",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "cb077b8c-1eeb-40e0-a3bb-683ba9df20c7"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
