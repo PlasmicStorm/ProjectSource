@@ -6,7 +6,7 @@ var move_dir_down	= keyboard_check(ord("S"));
 var move_dir_left	= keyboard_check(ord("A"));
 var move_dir_right	= keyboard_check(ord("D"));
 var move_dodge		= keyboard_check(vk_space) && dodge_cooldown = 0;
-var shoot			= mouse_check_button_pressed(mb_left) && bullet_cooldown == 0;
+var shoot			= mouse_check_button(mb_left) && bullet_cooldown == 0;
 
 //Set temp vars for input and speed
 var y_dir = move_dir_down - move_dir_up;
@@ -69,7 +69,8 @@ if(sprite_index == spr_player_roll_front or sprite_index == spr_player_roll_side
 
 if(shoot) 
 {
-	bullet_cooldown = 10;
+	var fire_rate_buff	= ds_map_find_value(items, 0);
+	bullet_cooldown		= ds_map_exists(items, 0) ? ceil(max(20 * exp(fire_rate_buff * -0.05), 0)) : 20;
 	instance_create_layer(x, y, "InstanceLayer", obj_projectile);
 }
 
