@@ -60,3 +60,34 @@ particle_system0 = part_system_create_layer("BottomParticleLayer", false);
 	//Other
 	part_type_life(		particle3, 3200, 6000);
 #endregion
+
+#region Colour Explosion
+	particle4 = part_type_create();
+	//Looks
+	part_type_shape(	particle4, pt_shape_pixel);
+	part_type_size(		particle4, 0.5, 2, 0.005, 0);
+	part_type_color_rgb(particle4, 0, 255, 0, 255, 0, 255);
+	part_type_alpha2(	particle4, 1, 0);
+	part_type_blend(	particle4, true);
+	//Movement
+	part_type_speed(	particle4, 0.5, 3, -0.2, 0);
+	part_type_direction(particle4, 0, 360, 0, 0);
+	//Other
+	part_type_life(		particle4, 32, 60);
+#endregion
+
+#region Colour
+	particle5 = part_type_create();
+	//Looks
+	part_type_shape(	particle5, pt_shape_pixel);
+	part_type_size(		particle5, 0.5, 2, 0.005, 0);
+	part_type_color_rgb(particle5, 0, 255, 0, 255, 0, 255);
+	part_type_alpha2(	particle5, 1, 0);
+	part_type_blend(	particle5, true);
+	//Movement
+	part_type_speed(	particle5, 1, 2, -0.2, 0);
+	part_type_direction(particle5, 0, 180, 0, 0);
+	part_type_gravity(	particle5, 0.1, 90);
+	//Other
+	part_type_life(		particle5, 32, 60);
+#endregion

@@ -1,1 +1,1 @@
-y_offset++;
+y_height++;

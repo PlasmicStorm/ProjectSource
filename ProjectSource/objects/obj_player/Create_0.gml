@@ -8,8 +8,9 @@ x_speed_multiply = 0.3;
 y_speed_multiply = 0.2;
 
 invincible		= false;
-max_hp			= 20;
+max_hp			= 1;
 hp				= max_hp;
+base_damage		= 1;
 damage_cooldown	= 0;
 
-items			= ds_map_create();
+items			= ds_grid_create(2, 0);

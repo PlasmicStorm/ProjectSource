@@ -4,7 +4,6 @@ max_hp			= 30;
 hp				= max_hp;
 slime_cooldown	= floor(random_range(0, 100));
 target_path		= path_add();
-frame			= 0;
 frame_cooldown	= 0;
 
 time			= random_range(0, 100);

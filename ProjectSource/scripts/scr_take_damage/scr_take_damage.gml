@@ -2,7 +2,7 @@
 
 var damage = argument0;
 
-show_debug_message("damage should be calculated. Cooldown: " + string(damage_cooldown) + " invincible? " + string(invincible));
+//show_debug_message("damage should be calculated. Cooldown: " + string(damage_cooldown) + " invincible? " + string(invincible));
 if(damage_cooldown == 0 && !invincible)
 {
 	hp -= damage;

@@ -36,3 +36,4 @@ if(frame_cooldown <= 0)
 	frame_cooldown = sprite_index.image_speed;
 	image_index = (image_index + 1) % sprite_get_number(sprite_index);
 }
+health = hp;

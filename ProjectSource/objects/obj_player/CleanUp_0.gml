@@ -1,1 +1,1 @@
-ds_map_destroy(items);
+ds_grid_destroy(items);

@@ -1,2 +1,2 @@
-scr_draw_shadow(0.2, 0, 0.3);
-draw_self()
+scr_draw_shadow(0.5, 0, 0, 0.5, false);
+draw_self();

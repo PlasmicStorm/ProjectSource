@@ -6,8 +6,8 @@ image_yscale = 0.5;
 projectile_speed = 5;
 damage = 1;
 if(instance_exists(obj_player))
-	if(ds_map_exists(obj_player.items, 1))
-		damage = 1 + ds_map_find_value(obj_player.items, 1);
+	damage = obj_player.base_damage;
+show_debug_message(string(damage));
 
 direction = point_direction(x, y, mouse_x, mouse_y);
 speed = projectile_speed;

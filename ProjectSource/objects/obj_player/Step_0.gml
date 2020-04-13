@@ -69,19 +69,22 @@ if(sprite_index == spr_player_roll_front or sprite_index == spr_player_roll_side
 
 if(shoot) 
 {
-	var fire_rate_buff	= ds_map_find_value(items, 0);
-	bullet_cooldown		= ds_map_exists(items, 0) ? ceil(max(20 * exp(fire_rate_buff * -0.05), 0)) : 20;
+	var fire_rate_buff	= scr_get_item_amount(0);
+	bullet_cooldown		= ceil(max(20 * exp(fire_rate_buff * -0.05), 0));
 	instance_create_layer(x, y, "InstanceLayer", obj_projectile);
 }
 
+//Check for item
 var colliding_instance = instance_place(x, y, obj_item);
 if(colliding_instance != noone)
 {
-	if(ds_map_exists(items, colliding_instance.item_id))
-		ds_map_replace(items, colliding_instance.item_id, ds_map_find_value(items, colliding_instance.item_id) + 1);
-	else
-		ds_map_add(items, colliding_instance.item_id, 1);
-		instance_destroy(colliding_instance);
+	scr_add_item(colliding_instance.item_id);
+	part_particles_create(	obj_particle_system0.particle_system0, 
+							colliding_instance.x, 
+							colliding_instance.y, 
+							obj_particle_system0.particle4, 40);
+	instance_destroy(colliding_instance);
+	base_damage = 1 + scr_get_item_amount(1);
 }
 
 
