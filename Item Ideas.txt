@@ -1,0 +1,12 @@
+Book of Fast Casting - Flat 15%
+Crit Scroll - 10% Crit; >10 Crit Scrolls 5% Crit dmg increase
+Life Bug - Burst Heal when Low (20%)
+Magic Torch - 5% dmg over Time; 10% Chance
+Drain Skull - Lifesteal 10% but 2% less max Life
+Robe of Protection - 20% Chance (doesnt Stack) to reduce 5% (Stacks) dmg
+Robe of Life - 110% max health
+Lucky Hoof - Increases chances by 5%
+Cursed Fluid - 10% chance to Debuff enemy; If it dies a small projectile shoots to the next enemy in range
+
+
+
