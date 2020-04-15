@@ -1,4 +1,4 @@
-global.cam = camera_create();
+cam = camera_create();
 
 if(instance_exists(obj_player))
 {
@@ -14,11 +14,11 @@ var pm = matrix_build_projection_ortho(pixel_res_x, pixel_res_y, 1, 100000);
 view_w = 1920;
 view_h = 1080;
 
-camera_set_view_mat(global.cam, vm);
-camera_set_proj_mat(global.cam, pm);
-camera_set_view_size(global.cam, pixel_res_x, pixel_res_y);
+camera_set_view_mat(cam, vm);
+camera_set_proj_mat(cam, pm);
+camera_set_view_size(cam, pixel_res_x, pixel_res_y);
 
-view_camera[0] = global.cam;
+view_camera[0] = cam;
 
 display_set_gui_size(view_w, view_h);
 surface_resize(application_surface, view_w, view_h);

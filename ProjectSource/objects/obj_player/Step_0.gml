@@ -81,7 +81,7 @@ if(sprite_index == spr_player_roll_front or sprite_index == spr_player_roll_side
 
 if(shoot) 
 {
-	var fire_rate_buff	= scr_get_item_amount(0);
+	var fire_rate_buff	= scr_get_item_amount(0) + 100;
 	bullet_cooldown		= ceil(max(20 * exp(fire_rate_buff * -0.05), 0));
 	instance_create_layer(x, y, "InstanceLayer", obj_projectile);
 }

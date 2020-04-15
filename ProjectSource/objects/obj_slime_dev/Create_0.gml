@@ -3,7 +3,6 @@
 max_hp			= 10;
 hp				= max_hp;
 slime_cooldown	= floor(random_range(0, 100));
-frame_cooldown	= 0;
 x_speed = 0;
 y_speed = 0;
 
