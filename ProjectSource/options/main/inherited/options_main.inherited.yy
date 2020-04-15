@@ -4,7 +4,8 @@
     },
     "option_gameguid": "aca632d7-f7a6-484f-b79f-e1e93cc63caa",
     "option_game_speed": 60,
-    "option_lastchanged": "11 April 2020 15:59:26"
+    "option_lastchanged": "11 April 2020 15:59:26",
+    "option_spine_licence": true
 }←be5f1418-b31b-48af-a023-f04cdf6e5121|{
     "textureGroups": {
         "Additions": [
@@ -15,6 +16,21 @@
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
                     "groupName": "BumpMap",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 2,
+                "Value": {
+                    "id": "657b0dfe-a360-4b51-b1e6-cf58e0a04346",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Wave",
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,

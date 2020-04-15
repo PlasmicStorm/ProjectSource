@@ -1,10 +1,11 @@
 /// @description Initialize variables
 
-max_hp			= 30;
+max_hp			= 10;
 hp				= max_hp;
 slime_cooldown	= floor(random_range(0, 100));
-target_path		= path_add();
 frame_cooldown	= 0;
+x_speed = 0;
+y_speed = 0;
 
 time			= random_range(0, 100);
 strength		= 0.006;

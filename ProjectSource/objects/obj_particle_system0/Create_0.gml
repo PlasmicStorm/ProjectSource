@@ -52,7 +52,7 @@ particle_system0 = part_system_create_layer("BottomParticleLayer", false);
 	//Looks
 	part_type_shape(	particle3, pt_shape_pixel);
 	part_type_size(		particle3, 1, 4, 0, 0);
-	part_type_color_rgb(particle3, 200, 255, 0, 0, 0, 0);
+	part_type_color_rgb(particle3, 100, 150, 0, 0, 0, 0);
 	part_type_alpha2(	particle3, 0.9, 0.9);
 	//Movement
 	part_type_speed(	particle3, 0, 1, -0.4, 0);

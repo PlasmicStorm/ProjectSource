@@ -1,5 +1,9 @@
 /// @description Movement + Animation
 
+//Check if player is in stasis
+if(stasis)
+	return;
+
 //Check Inputs
 var move_dir_up		= keyboard_check(ord("W"));
 var move_dir_down	= keyboard_check(ord("S"));

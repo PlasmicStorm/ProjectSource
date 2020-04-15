@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-time				+= 0.002;
-var size			= 4;
+time	 += 0.002;
+var size = 4;
 
 //Shader has to be drawn here to prevent shader glitches
 scr_draw_shadow(0.3, 0, -2, 0.3, false);
