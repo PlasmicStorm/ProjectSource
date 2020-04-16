@@ -9,7 +9,9 @@ is_server = false;
 
 enum DATA {
 	init_data,
-	player_update
+	player_update,
+	player_join,
+	nice_cock_bro
 }
 
 clients = ds_list_create();

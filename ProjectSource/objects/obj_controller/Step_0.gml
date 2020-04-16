@@ -1,3 +1,4 @@
+#region debug interface
 if(room == r_init)
 {
 	if(keyboard_check_pressed(vk_space)) 
@@ -26,3 +27,4 @@ if(room == r_init)
 			room_goto(r_castle);
 	}
 }
+#endregion

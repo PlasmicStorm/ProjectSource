@@ -111,11 +111,14 @@ life_bug_cooldown	-= sign(life_bug_cooldown);
 
 //Create Buffer
 
-var buffer = buffer_create(6, buffer_fixed, 1);
+var buffer = buffer_create(10, buffer_fixed, 1);
 buffer_write(buffer, buffer_u8, DATA.player_update);
 buffer_write(buffer, buffer_u8, player_id);
 buffer_write(buffer, buffer_s16, x);
 buffer_write(buffer, buffer_s16, y);
+buffer_write(buffer, buffer_s8, image_xscale);
+buffer_write(buffer, buffer_s16, sprite_index);
+buffer_write(buffer, buffer_u8, image_index)
 
 //Send to server
 if(obj_controller.is_server)
