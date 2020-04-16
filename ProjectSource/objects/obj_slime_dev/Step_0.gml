@@ -1,6 +1,3 @@
-/// @description Insert description here
-
-
 //check if alive
 if(hp < 1)
 {

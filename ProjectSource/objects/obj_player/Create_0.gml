@@ -16,4 +16,7 @@ base_damage			= 20;
 damage_cooldown		= 60;
 life_bug_cooldown	= 0;
 
+is_local			= true;
+player_id			= -1;
+
 items				= ds_grid_create(2, 0);

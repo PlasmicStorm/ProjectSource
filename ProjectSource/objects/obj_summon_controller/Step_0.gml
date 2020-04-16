@@ -1,3 +1,5 @@
+if(!obj_controller.is_server) exit;
+
 if(spawn_timer == 0)
 {
 	x = random(room_width);

@@ -1,5 +1,8 @@
 /// @description Movement + Animation
 
+//Check if player is local
+if(!is_local) exit;
+
 //Check if player is in stasis
 if(stasis)
 	return;
@@ -87,7 +90,7 @@ if(shoot)
 }
 
 //Check for item
-var colliding_instance = instance_place(x, y, obj_item);
+var colliding_instance = instance_place (x, y, obj_item);
 if(colliding_instance != noone)
 {
 	scr_add_item(colliding_instance.item_id);
@@ -105,3 +108,36 @@ dodge_cooldown		-= sign(dodge_cooldown);
 bullet_cooldown		-= sign(bullet_cooldown);
 damage_cooldown		-= sign(damage_cooldown);
 life_bug_cooldown	-= sign(life_bug_cooldown);
+
+//Create Buffer
+
+var buffer = buffer_create(6, buffer_fixed, 1);
+buffer_write(buffer, buffer_u8, DATA.player_update);
+buffer_write(buffer, buffer_u8, player_id);
+buffer_write(buffer, buffer_s16, x);
+buffer_write(buffer, buffer_s16, y);
+
+//Send to server
+if(obj_controller.is_server)
+{
+	///loop through all clients
+	for(var i=0; i<ds_list_size(obj_controller.clients); i++)
+	{
+		//get client socket
+		var soc = obj_controller.clients[| i];
+		
+		//Skip server player
+		if(soc<0)
+			continue;
+			
+		//Send
+		network_send_packet(soc, buffer, buffer_get_size(buffer));
+	}
+}
+else
+{
+	network_send_packet(obj_controller.server, buffer, buffer_get_size(buffer));
+}
+
+//Delete buffer
+buffer_delete(buffer);
