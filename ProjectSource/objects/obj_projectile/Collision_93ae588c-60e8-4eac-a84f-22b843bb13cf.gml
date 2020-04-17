@@ -2,7 +2,8 @@
 
 //deal damage
 var colliding_instance = instance_place(x, y, obj_slime_dev);
-colliding_instance.hp -= damage;
+if(obj_controller.is_server)
+	colliding_instance.hp -= damage;
 
 //Explode into particles
 part_particles_create(obj_particle_system1.particle_system0, x, y, obj_particle_system1.particle2, 5);

@@ -12,7 +12,8 @@ stasis				= false;
 invincible			= false;
 max_hp				= 100;
 hp					= max_hp;
-base_damage			= 20;
+base_damage			= 1;
+shot_dmg			= 0;
 damage_cooldown		= 60;
 life_bug_cooldown	= 0;
 

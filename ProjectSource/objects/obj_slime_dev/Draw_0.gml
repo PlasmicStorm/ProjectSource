@@ -1,6 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
 time	 += 0.002;
 var size = 4;
 
@@ -18,4 +15,5 @@ shader_set(shd_distort);
 	draw_sprite(sprite_index, image_index, x, y);
 shader_reset();
 
+//draw_text(x, y, string(hp));
 scr_draw_health(max_hp, hp, 10);

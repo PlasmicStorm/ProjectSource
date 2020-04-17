@@ -1,5 +1,7 @@
 /// @description Initialize variables
 
+enemy_id		= instance_number(obj_slime_dev);
+
 max_hp			= 10;
 hp				= max_hp;
 slime_cooldown	= floor(random_range(0, 100));

@@ -4,7 +4,7 @@
 var maxHP		= argument0;
 var currentHP	= argument1;
 var size		= argument2;
-var bar_offset  = (2 * size) * (1 - currentHP/maxHP);
+var bar_offset  = (2 * size) * (1 - real(currentHP)/real(maxHP));
 
 //draw Back
 draw_set_color(c_black);

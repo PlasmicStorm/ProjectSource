@@ -11,8 +11,8 @@ pixel_res_y = 180;
 
 var vm = matrix_build_lookat(x,y-10,x,y,0,0,0,1, 0);
 var pm = matrix_build_projection_ortho(pixel_res_x, pixel_res_y, 1, 100000);
-view_w = 320;
-view_h = 180;
+view_w = 640;
+view_h = 360;
 
 camera_set_view_mat(cam, vm);
 camera_set_proj_mat(cam, pm);

@@ -11,7 +11,9 @@ enum DATA {
 	init_data,
 	player_update,
 	player_join,
+	enemy_update,
 	nice_cock_bro
 }
 
 clients = ds_list_create();
+tracked_enemys	= ds_map_create();

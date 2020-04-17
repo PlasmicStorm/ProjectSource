@@ -84,9 +84,11 @@ if(sprite_index == spr_player_roll_front or sprite_index == spr_player_roll_side
 
 if(shoot) 
 {
-	var fire_rate_buff	= scr_get_item_amount(0) + 100;
-	bullet_cooldown		= ceil(max(20 * exp(fire_rate_buff * -0.05), 0));
-	instance_create_layer(x, y, "InstanceLayer", obj_projectile);
+	var fire_rate_buff		= scr_get_item_amount(0);
+	shot_dmg				= base_damage;
+	bullet_cooldown			= ceil(max(20 * exp(fire_rate_buff * -0.05), 0));
+	var shot_projectile		= instance_create_layer(x, y, "InstanceLayer", obj_projectile);
+	shot_projectile.damage	= shot_dmg;
 }
 
 //Check for item
@@ -109,16 +111,18 @@ bullet_cooldown		-= sign(bullet_cooldown);
 damage_cooldown		-= sign(damage_cooldown);
 life_bug_cooldown	-= sign(life_bug_cooldown);
 
-//Create Buffer
-
-var buffer = buffer_create(10, buffer_fixed, 1);
-buffer_write(buffer, buffer_u8, DATA.player_update);
-buffer_write(buffer, buffer_u8, player_id);
-buffer_write(buffer, buffer_s16, x);
-buffer_write(buffer, buffer_s16, y);
-buffer_write(buffer, buffer_s8, image_xscale);
-buffer_write(buffer, buffer_s16, sprite_index);
-buffer_write(buffer, buffer_u8, image_index)
+//Create Buffer´
+var buffer = buffer_create(16, buffer_fixed, 1);
+buffer_write(buffer, buffer_u8,		DATA.player_update);
+buffer_write(buffer, buffer_u8,		player_id);
+buffer_write(buffer, buffer_s16,	x);
+buffer_write(buffer, buffer_s16,	y);
+buffer_write(buffer, buffer_s8,		image_xscale);
+buffer_write(buffer, buffer_s16,	sprite_index);
+buffer_write(buffer, buffer_u8,		image_index);
+buffer_write(buffer, buffer_u8,		shoot);
+buffer_write(buffer, buffer_u16,	shot_dmg);
+buffer_write(buffer, buffer_s16,	point_direction(x, y, mouse_x, mouse_y));
 
 //Send to server
 if(obj_controller.is_server)
