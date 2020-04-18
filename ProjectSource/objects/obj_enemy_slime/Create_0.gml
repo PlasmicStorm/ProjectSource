@@ -1,6 +1,7 @@
 /// @description Initialize variables
 
 enemy_id		= instance_number(obj_enemy);
+enemy_name		= enemy_type.slime;
 
 max_hp			= 10;
 hp				= max_hp;

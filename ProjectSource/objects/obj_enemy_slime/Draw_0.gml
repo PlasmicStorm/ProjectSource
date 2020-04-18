@@ -14,6 +14,4 @@ shader_set(shd_distort);
 	
 	draw_sprite(sprite_index, image_index, x, y);
 shader_reset();
-
-draw_text(x, y, string(obj_controller.is_server));
 scr_draw_health(max_hp, hp, 10);

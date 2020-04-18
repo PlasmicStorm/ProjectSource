@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "27e86654-0407-46b2-bf79-a88adaaa3144",
+            "Value": {
+                "id": "556275aa-70b8-4a51-a61a-d9c213edcee4",
+                "resourcePath": "scripts\\scr_get_obj_from_enemy_type\\scr_get_obj_from_enemy_type.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "291d4f2c-af26-435e-bf57-04dfd645d2ac",
             "Value": {
                 "id": "9694d833-cdd2-4caf-afcd-286e7051703d",
@@ -929,7 +937,8 @@
         "0e5b07ec-efe3-4e45-a64a-8c24e30f1b55",
         "e52a5ac5-2cd4-429a-8618-7af88c9c9a82",
         "a9247a62-5941-4d44-920c-7ea8db2e9063",
-        "5fe571e3-1003-4e00-bfe3-10b69ed8a54d"
+        "5fe571e3-1003-4e00-bfe3-10b69ed8a54d",
+        "27e86654-0407-46b2-bf79-a88adaaa3144"
     ],
     "tutorial": ""
 }

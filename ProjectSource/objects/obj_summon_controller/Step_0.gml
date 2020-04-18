@@ -18,7 +18,7 @@ if(spawn_timer == 0)
 spawn_timer -= sign(spawn_timer);
 
 //Networking
-var buffer = buffer_create(instance_number(obj_enemy) * 11 + 3, buffer_fixed, 1);
+var buffer = buffer_create(instance_number(obj_enemy) * 13 + 3, buffer_fixed, 1);
 buffer_seek(buffer, buffer_seek_start, 0);
 buffer_write(buffer, buffer_u8, DATA.enemy_update);
 buffer_write(buffer, buffer_u16, instance_number(obj_enemy));
@@ -31,6 +31,7 @@ with obj_enemy
 	buffer_write(buffer, buffer_u8, image_index);
 	buffer_write(buffer, buffer_u8, max_hp);
 	buffer_write(buffer, buffer_u8, hp);
+	buffer_write(buffer, buffer_u8, enemy_name);
 }
 for(var i=0; i<ds_list_size(obj_controller.clients); i++)
 {

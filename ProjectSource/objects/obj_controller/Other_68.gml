@@ -120,6 +120,7 @@ else if(type == network_type_data) {
 				var enemy_image_index	= buffer_read(buffer, buffer_u8);
 				var enemy_max_hp		= buffer_read(buffer, buffer_u8);
 				var enemy_hp			= buffer_read(buffer, buffer_u8);
+				var enemy_type_server	= buffer_read(buffer, buffer_u8);
 				
 				ds_map_add(tracked_enemys, enemy_server_id, enemy_hp);
 				
@@ -140,7 +141,7 @@ else if(type == network_type_data) {
 				//enemy has to be created
 				if(!found_enemy)
 				{
-					new_enemy = instance_create_layer(enemy_x, enemy_y, "InstanceLayer", obj_enemy);
+					new_enemy = instance_create_layer(enemy_x, enemy_y, "InstanceLayer", scr_get_obj_from_enemy_type(enemy_type_server));
 					new_enemy.enemy_id = enemy_server_id;
 				}
 			}
@@ -200,6 +201,13 @@ else if(type == network_type_data) {
 			}
 			
 			break;
-		#endregion	
+		#endregion
+		#region spawn_portal
+		case DATA.spawn_portal:
+			var xx	= buffer_read(buffer, buffer_s16);
+			var yy	= buffer_read(buffer, buffer_s16);
+			instance_create_layer(xx, yy, "InstanceLayer", obj_portal);
+			break;
+		#endregion
 	}
 }
