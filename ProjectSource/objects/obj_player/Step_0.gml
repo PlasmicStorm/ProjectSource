@@ -1,11 +1,12 @@
 /// @description Movement + Animation
 
 //Check if player is local
-if(!is_local) exit;
+if(!is_local) 
+	exit;
 
 //Check if player is in stasis
 if(stasis)
-	return;
+	exit;
 
 //Check Inputs
 var move_dir_up		= keyboard_check(ord("W"));
@@ -100,8 +101,23 @@ if(colliding_instance != noone)
 							colliding_instance.x, 
 							colliding_instance.y, 
 							obj_particle_system0.particle4, 40);
-	instance_destroy(colliding_instance);
+	//Update stats
 	base_damage = 1 + scr_get_item_amount(1);
+	
+	//Send data to Server
+	if(!obj_controller.is_server)
+	{
+		var buffer = buffer_create(4, buffer_fixed, 1);
+		
+		buffer_write(buffer, buffer_u8,		DATA.item_delete);
+		buffer_write(buffer, buffer_u16,	colliding_instance.unique_item_id);
+		buffer_write(buffer, buffer_u8,		player_id);
+		
+		network_send_packet(obj_controller.server, buffer, buffer_get_size(buffer));
+	}
+	
+	//Delete instance
+	instance_destroy(colliding_instance);
 }
 
 

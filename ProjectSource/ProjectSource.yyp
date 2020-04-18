@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "5527221f-1802-415e-b3ef-0d9c6e31a2e5",
+            "Value": {
+                "id": "9db320ad-dd50-4493-a3d2-62bc7f83693d",
+                "resourcePath": "objects\\obj_slime_dev1\\obj_slime_dev1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "581736b5-0b72-4647-9fe0-b75380ead924",
             "Value": {
                 "id": "46a41bd1-63f5-4af8-93bb-e6ecba78906e",
@@ -850,7 +858,7 @@
             "Key": "f182d654-1cff-4d57-8adf-bcd006a9ee2d",
             "Value": {
                 "id": "a3e3be40-ee99-418b-8c57-c1c75e17cd4f",
-                "resourcePath": "objects\\obj_slime_dev\\obj_slime_dev.yy",
+                "resourcePath": "objects\\obj_enemy\\obj_enemy.yy",
                 "resourceType": "GMObject"
             }
         },

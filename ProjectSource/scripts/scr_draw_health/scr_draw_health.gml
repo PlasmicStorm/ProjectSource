@@ -4,6 +4,10 @@
 var maxHP		= argument0;
 var currentHP	= argument1;
 var size		= argument2;
+if(maxHP < currentHP)
+	currentHP = maxHP;
+if(currentHP < 0)
+	currentHP = 0;
 var bar_offset  = (2 * size) * (1 - real(currentHP)/real(maxHP));
 
 //draw Back

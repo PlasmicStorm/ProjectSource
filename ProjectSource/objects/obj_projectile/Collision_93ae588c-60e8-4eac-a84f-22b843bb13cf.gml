@@ -1,7 +1,7 @@
 /// @description collision with enemy
 
 //deal damage
-var colliding_instance = instance_place(x, y, obj_slime_dev);
+var colliding_instance = instance_place(x, y, obj_enemy);
 if(obj_controller.is_server)
 	colliding_instance.hp -= damage;
 

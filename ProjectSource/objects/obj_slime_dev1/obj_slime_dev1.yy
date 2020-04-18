@@ -1,38 +1,38 @@
 {
-    "id": "b3b33e98-25b6-4b7e-b441-ea944e68402e",
+    "id": "5527221f-1802-415e-b3ef-0d9c6e31a2e5",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_portal",
+    "name": "obj_slime_dev1",
     "eventList": [
         {
-            "id": "24e46468-13d9-4d84-8317-de92822dbc63",
+            "id": "ff2c8c51-7070-42ea-a010-ea34d4363f2e",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "b3b33e98-25b6-4b7e-b441-ea944e68402e"
+            "m_owner": "5527221f-1802-415e-b3ef-0d9c6e31a2e5"
         },
         {
-            "id": "73522ccc-bb98-4efb-b8de-195e1041f5a1",
+            "id": "7b1ae415-dbc6-4cca-ad8b-d5b1511eccd8",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "b3b33e98-25b6-4b7e-b441-ea944e68402e"
+            "m_owner": "5527221f-1802-415e-b3ef-0d9c6e31a2e5"
         },
         {
-            "id": "f56a7ed0-320c-4067-94a0-0df33cc9d35a",
+            "id": "05372f38-8187-4ce9-90e2-a53ad9eb5a0c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
-            "m_owner": "b3b33e98-25b6-4b7e-b441-ea944e68402e"
+            "m_owner": "5527221f-1802-415e-b3ef-0d9c6e31a2e5"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -51,23 +51,8 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "27203439-db25-4386-9a85-c43da03001aa",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "obj_enemy",
-            "varName": "summoned_instance",
-            "varType": 5
-        }
-    ],
+    "properties": null,
     "solid": false,
-    "spriteId": "585d29d1-e43d-423e-9b1f-0b6b7f0e9ab1",
+    "spriteId": "d326765e-4e41-421e-bb45-ace9351a0ab1",
     "visible": true
 }

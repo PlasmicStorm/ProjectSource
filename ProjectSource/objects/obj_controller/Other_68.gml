@@ -1,5 +1,6 @@
 var type = async_load[? "type"];
 
+#region Connect player
 if(type == network_type_connect)
 {
 	var socket = async_load[? "socket"];
@@ -31,6 +32,7 @@ if(type == network_type_connect)
 	//add to clients
 	ds_list_add(clients, socket);
 }
+#endregion
 
 //Data
 else if(type == network_type_data) {
@@ -85,7 +87,6 @@ else if(type == network_type_data) {
 				buffer_seek(buffer, buffer_seek_start, 0);
 				for(var i = 1; i<ds_list_size(clients); i++)
 				{
-					show_debug_message(string(socket_id) + " equals " + string(i) + " for client " + string(socket_id));
 					if(socket_id == i)
 						continue;
 					network_send_packet(ds_list_find_value(clients, i), buffer, buffer_get_size(buffer));
@@ -123,13 +124,13 @@ else if(type == network_type_data) {
 				ds_map_add(tracked_enemys, enemy_server_id, enemy_hp);
 				
 				//get instance with id
-				with obj_slime_dev
+				with obj_enemy
 				{
 					if(enemy_id == enemy_server_id)
 					{
 						found_enemy		= true;
-						x				= enemy_x;
-						y				= enemy_y;
+						x				= real(enemy_x);
+						y				= real(enemy_y);
 						sprite_index	= enemy_sprite_index;
 						image_index		= enemy_image_index;
 						max_hp			= enemy_max_hp;
@@ -139,11 +140,66 @@ else if(type == network_type_data) {
 				//enemy has to be created
 				if(!found_enemy)
 				{
-					new_enemy = instance_create_layer(enemy_x, enemy_y, "InstanceLayer", obj_slime_dev);
+					new_enemy = instance_create_layer(enemy_x, enemy_y, "InstanceLayer", obj_enemy);
 					new_enemy.enemy_id = enemy_server_id;
 				}
 			}
 			break;
 		#endregion
+		#region item_update
+		case DATA.item_update:
+			var item_count = buffer_read(buffer, buffer_u16);
+			ds_map_clear(tracked_items);
+
+			for(var i = 0; i<item_count; i++)
+			{
+				var found_item = false;
+				var item_server_id			= buffer_read(buffer, buffer_u16);
+				var item_server_id_unique	= buffer_read(buffer, buffer_u32);
+				var item_x					= buffer_read(buffer, buffer_s16);
+				var item_y					= buffer_read(buffer, buffer_s16);
+				
+				ds_map_add(tracked_items, item_server_id_unique, item_server_id);
+				
+				
+				//get instance with id
+				with obj_item
+				{
+					if(unique_item_id == item_server_id_unique)
+					{
+						found_item		= true;
+						x				= item_x;
+						y				= item_y;
+						item_id			= item_server_id;
+					}
+				}
+				//item has to be created
+				if(!found_item)
+				{
+					var new_item			= instance_create_layer(item_x, item_y, "InstanceLayer", obj_item);
+					new_item.item_id		= item_server_id;
+					new_item.unique_item_id	= item_server_id_unique;
+				}
+			}
+			break;
+		#endregion	
+		#region item_delete
+		case DATA.item_delete:
+			var item_unique_client_id	= buffer_read(buffer, buffer_u16);
+			
+			with obj_item
+			{
+				if(unique_item_id == item_unique_client_id)
+				{
+					part_particles_create(	obj_particle_system0.particle_system0, 
+							x, 
+							y, 
+							obj_particle_system0.particle4, 40);
+							instance_destroy();
+				}
+			}
+			
+			break;
+		#endregion	
 	}
 }
