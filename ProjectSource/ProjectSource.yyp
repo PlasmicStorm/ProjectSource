@@ -330,7 +330,7 @@
             "Key": "5527221f-1802-415e-b3ef-0d9c6e31a2e5",
             "Value": {
                 "id": "9db320ad-dd50-4493-a3d2-62bc7f83693d",
-                "resourcePath": "objects\\obj_slime_dev1\\obj_slime_dev1.yy",
+                "resourcePath": "objects\\obj_enemy_slime\\obj_enemy_slime.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -732,6 +732,14 @@
                 "id": "87b196b9-d8a4-45e8-b370-e5413d7a98b3",
                 "resourcePath": "rooms\\r_testEnviroment\\r_testEnviroment.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "d0230d32-0791-4db3-9049-e131d7ac9a45",
+            "Value": {
+                "id": "71b557d3-d06a-42e6-a84c-f6113710afa4",
+                "resourcePath": "sprites\\spr_player_idle\\spr_player_idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

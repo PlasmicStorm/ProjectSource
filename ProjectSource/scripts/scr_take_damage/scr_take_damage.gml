@@ -13,7 +13,7 @@ if(damage_cooldown == 0 && !invincible)
 	{
 		part_particles_create(	obj_particle_system0.particle_system0, 
 							x + random_range(-4, 4), 
-							y + 8 + random(2), 
+							y + 16 + random(2), 
 							obj_particle_system0.particle3, 1);
 	}
 }

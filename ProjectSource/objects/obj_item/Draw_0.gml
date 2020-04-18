@@ -1,7 +1,6 @@
 sprite_index = scr_get_item_sprite(item_id);
 scr_draw_shadow(0.5, 0, sin(y_height * -0.05), 0.3, true);
 draw_sprite_ext(sprite_index, image_index, x, y + 2 * sin(y_height * 0.05) - 2, 1, 1, 0, c_white, 1);
-draw_text(x, y, string(unique_item_id));
 
 if(floor(random(10)) == 0)
 {

@@ -1,1 +1,1 @@
-summon_time	= 60;
+summon_time	= 30;

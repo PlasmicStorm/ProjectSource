@@ -19,8 +19,8 @@ var shoot			= mouse_check_button(mb_left) && bullet_cooldown == 0;
 //Set temp vars for input and speed
 var y_dir = move_dir_down - move_dir_up;
 var x_dir = move_dir_right - move_dir_left;
-y_speed += y_dir;
-x_speed += x_dir;
+y_speed += y_dir*2;
+x_speed += x_dir*2;
 
 //Check if life bug triggers
 if(hp/max_hp <= 0.2 && life_bug_cooldown == 0 && scr_get_item_amount(2) != 0)
@@ -37,15 +37,14 @@ if(hp <= 0)
 	instance_destroy();
 }
 
-
 //Do dodgeroll
 if(move_dodge)
 {
 	if(0 == y_dir && 0 == x_dir)
-		x_speed = 50 * image_xscale;
+		x_speed = 100 * image_xscale;
 	else
-		x_speed = 50 * x_dir;
-	y_speed = 50 * y_dir;
+		x_speed = 100 * x_dir;
+	y_speed = 100 * y_dir;
 	dodge_cooldown = 60;
 }
 
@@ -62,6 +61,14 @@ if(place_free(x, y + final_y_speed))
 x_speed *= 0.8;
 y_speed *= 0.8;
 
+//Animation
+if(!(sprite_index == spr_player_roll_front || sprite_index == spr_player_roll_side))
+{
+	if(move_dir_right || move_dir_left)
+		sprite_index = spr_player_walk;
+	if(!(move_dir_down || move_dir_up || move_dir_left || move_dir_right))
+		sprite_index = spr_player_idle;
+}
 //Set player sprite direction
 if(0 != sign(x_speed))
 	image_xscale = sign(x_speed);

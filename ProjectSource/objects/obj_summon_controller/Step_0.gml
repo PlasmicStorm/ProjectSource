@@ -11,7 +11,7 @@ if(spawn_timer == 0)
 	}
 	
 	var summon_creature = instance_create_layer(x, y, "InstanceLayer", obj_portal);
-	summon_creature.summoned_instance = obj_enemy;
+	summon_creature.summoned_instance = obj_enemy_slime;
 	
 	spawn_timer = spawn_cooldown;
 }

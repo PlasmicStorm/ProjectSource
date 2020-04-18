@@ -6,8 +6,8 @@ if(instance_exists(obj_player))
 	y = obj_player.y;
 }
 
-pixel_res_x = 320;
-pixel_res_y = 180;
+pixel_res_x = 640;
+pixel_res_y = 360;
 
 var vm = matrix_build_lookat(x,y-10,x,y,0,0,0,1, 0);
 var pm = matrix_build_projection_ortho(pixel_res_x, pixel_res_y, 1, 100000);

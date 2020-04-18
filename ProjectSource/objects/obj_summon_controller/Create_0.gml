@@ -1,2 +1,2 @@
-spawn_cooldown	= 120;
+spawn_cooldown	= 12;
 spawn_timer		= 0;
