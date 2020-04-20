@@ -3,6 +3,7 @@
 	{
 		if(keyboard_check_pressed(vk_space)) 
 		{
+			//server = network_create_server(network_socket_udp, server_port, 6);
 			server = network_create_server(network_socket_tcp, server_port, 6);
 		
 			//Fails

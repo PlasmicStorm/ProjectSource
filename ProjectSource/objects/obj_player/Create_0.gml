@@ -10,7 +10,7 @@ y_speed_multiply	= 0.2;
 stasis				= false;
 
 invincible			= false;
-max_hp				= 10;
+max_hp				= 100;
 hp					= max_hp;
 base_damage			= 1;
 shot_dmg			= 0;
