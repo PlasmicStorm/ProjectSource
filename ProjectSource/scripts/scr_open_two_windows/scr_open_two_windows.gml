@@ -1,5 +1,5 @@
 if(parameter_count() == 3) {
-					//*
+					/*
 	execute_shell(	parameter_string(0) + " " +
 					parameter_string(1) + " " +
 					parameter_string(2) + " " +

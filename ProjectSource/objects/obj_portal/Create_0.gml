@@ -6,8 +6,6 @@ if(obj_controller.is_server)
 	buffer_write(buffer, buffer_u8, DATA.spawn_portal);
 	buffer_write(buffer, buffer_s16, x);
 	buffer_write(buffer, buffer_s16, y);
-	for(var i=1; i<ds_list_size(obj_controller.clients); i++)
-	{
-		network_send_packet(ds_list_find_value(obj_controller.clients, i), buffer, buffer_get_size(buffer));
-	}
+	
+	scr_net_send_to_clients(buffer);
 }

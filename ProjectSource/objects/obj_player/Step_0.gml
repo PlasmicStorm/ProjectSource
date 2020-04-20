@@ -1,5 +1,3 @@
-/// @description Movement + Animation
-
 //Check if player is local
 if(!is_local) 
 	exit;
@@ -120,13 +118,13 @@ if(colliding_instance != noone)
 		buffer_write(buffer, buffer_u16,	colliding_instance.unique_item_id);
 		buffer_write(buffer, buffer_u8,		player_id);
 		
-		network_send_packet(obj_controller.server, buffer, buffer_get_size(buffer));
+		with obj_controller
+			network_send_udp(server, server_ip, server_port, buffer, buffer_get_size(buffer));
 	}
 	
 	//Delete instance
 	instance_destroy(colliding_instance);
 }
-
 
 //Reduce cooldowns
 dodge_cooldown		-= sign(dodge_cooldown);
@@ -134,7 +132,7 @@ bullet_cooldown		-= sign(bullet_cooldown);
 damage_cooldown		-= sign(damage_cooldown);
 life_bug_cooldown	-= sign(life_bug_cooldown);
 
-//Create Buffer´
+//Create Buffer
 var buffer = buffer_create(16, buffer_fixed, 1);
 buffer_write(buffer, buffer_u8,		DATA.player_update);
 buffer_write(buffer, buffer_u8,		player_id);
@@ -150,23 +148,11 @@ buffer_write(buffer, buffer_s16,	point_direction(x, y, mouse_x, mouse_y));
 //Send to server
 if(obj_controller.is_server)
 {
-	///loop through all clients
-	for(var i=0; i<ds_list_size(obj_controller.clients); i++)
-	{
-		//get client socket
-		var soc = obj_controller.clients[| i];
-		
-		//Skip server player
-		if(soc<0)
-			continue;
-			
-		//Send
-		network_send_packet(soc, buffer, buffer_get_size(buffer));
-	}
+	scr_net_send_to_clients(buffer);
 }
 else
 {
-	network_send_packet(obj_controller.server, buffer, buffer_get_size(buffer));
+	scr_net_send_to_server(buffer);
 }
 
 //Delete buffer

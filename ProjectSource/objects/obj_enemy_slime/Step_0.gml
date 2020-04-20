@@ -14,7 +14,7 @@ if(!obj_controller.is_server)
 if(hp < 1)
 {
 	part_particles_create(obj_particle_system1.particle_system0, x, y, obj_particle_system1.particle0, 20);
-	var temp			= instance_create_layer(x+20, y, "InstanceLayer", obj_item);
+	var temp			= instance_create_layer(x, y, "InstanceLayer", obj_item);
 	temp.item_id		= round(random(2));
 	temp.unique_item_id	= round(random(65535));
 	instance_destroy();

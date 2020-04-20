@@ -1,4 +1,7 @@
-if(!obj_controller.is_server) exit;
+if(!obj_controller.is_server)
+{
+	exit;
+}
 
 if(spawn_timer == 0)
 {
@@ -33,17 +36,4 @@ with obj_enemy
 	buffer_write(buffer, buffer_u8, hp);
 	buffer_write(buffer, buffer_u8, enemy_name);
 }
-for(var i=0; i<ds_list_size(obj_controller.clients); i++)
-{
-	//get client socket
-	var soc = obj_controller.clients[| i];
-		
-	//Skip server player
-	if(soc<0)
-		continue;
-			
-	//Send
-	buffer_seek(buffer, buffer_seek_start, 0);
-	network_send_packet(soc, buffer, buffer_get_size(buffer));
-	//show_debug_message("Client: " + string(soc) + " buffsize " + string(buffer_get_size(buffer)));
-}
+scr_net_send_to_clients(buffer);

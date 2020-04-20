@@ -15,6 +15,7 @@ enum DATA {
 	item_update,
 	item_delete,
 	spawn_portal,
+	heartbeat,
 	nice_cock_bro
 }
 
@@ -23,6 +24,9 @@ enum enemy_type
 	slime
 }
 
-clients = ds_list_create();
+connected		= false;
+packetno		= 0;
+clients			= ds_list_create();
+client_ips		= ds_grid_create(2, 0);
 tracked_enemys	= ds_map_create();
 tracked_items	= ds_map_create();
