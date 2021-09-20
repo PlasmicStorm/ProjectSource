@@ -1,4 +1,4 @@
-if(room == r_castle)
+if(room == r_test)
 {
 	var plr = instance_create_layer(100, 100, "InstanceLayer", obj_player)
 	plr.player_id = 0;

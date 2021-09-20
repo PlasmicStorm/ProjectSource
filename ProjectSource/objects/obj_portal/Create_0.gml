@@ -7,5 +7,5 @@ if(obj_controller.is_server)
 	buffer_write(buffer, buffer_s16, x);
 	buffer_write(buffer, buffer_s16, y);
 	
-	scr_net_send_to_clients(buffer);
+	scr_net_send_to_clients(buffer, -1);
 }

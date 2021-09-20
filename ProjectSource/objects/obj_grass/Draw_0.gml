@@ -1,4 +1,4 @@
-var size			= 4;
+var size = 4;
 
 //Shader has to be drawn here to prevent shader glitches
 

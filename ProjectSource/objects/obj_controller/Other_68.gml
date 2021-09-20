@@ -7,11 +7,12 @@ switch(data)
 {
 	#region heartbeat
 		case DATA.heartbeat:
-		var socket = async_load[? "id"];
-		var socket_ip = async_load[? "ip"];
+		var socket		= async_load[? "id"];
+		var socket_ip	= async_load[? "ip"];
 		var socket_port = async_load[? "port"];
 		//show_debug_message("Received heartbeat from: " + string(socket) + " ip: " + string(socket_ip) + ":" + string(socket_port) + " known instances: " +  string(ds_list_size(clients)));
-		if(ds_list_find_index(clients, socket) == -1)
+		if(	!ds_grid_value_exists(client_ips, 0, 0, 0, ds_grid_height(client_ips), socket_ip) ||
+			!ds_grid_value_exists(client_ips, 1, 0, 1, ds_grid_height(client_ips), socket_port)) //ds_list_find_index(clients, socket) == -1)
 		{
 			var buffer = buffer_create(2, buffer_fixed, 1);
 	
@@ -31,13 +32,14 @@ switch(data)
 			buffer_write(buffer, buffer_u8, DATA.player_join);
 			buffer_write(buffer, buffer_u8, plr.player_id);
 	
-			scr_net_send_to_clients(buffer);
+			scr_net_send_to_clients(buffer, -1);
 	
 			//add to clients
 			ds_list_add(clients, socket);
-			ds_grid_resize(clients, 2, ds_list_size(clients));
-			ds_grid_set(clients,0, ds_list_size(clients) - 1, socket_ip);
-			ds_grid_set(clients,1, ds_list_size(clients) - 1, socket_port);
+			ds_grid_resize(client_ips, 2, ds_list_size(clients));
+			ds_grid_set(client_ips,0, ds_list_size(clients) - 1, socket_ip);
+			ds_grid_set(client_ips,1, ds_list_size(clients) - 1, socket_port);
+			show_debug_message("New Client added to known clients: " + string(socket_ip) + ":" + string(socket_port))
 		}
 		break;
 	#endregion
@@ -67,12 +69,16 @@ switch(data)
 		{
 			if(pID == player_id)
 			{
+				hp				= buffer_read(buffer, buffer_u16);
+				invincible		= buffer_read(buffer, buffer_bool);
 				x				= buffer_read(buffer, buffer_s16);
 				y				= buffer_read(buffer, buffer_s16);
 				image_xscale	= buffer_read(buffer, buffer_s8);
 				sprite_index	= buffer_read(buffer, buffer_s16);
 				image_index		= buffer_read(buffer, buffer_u8);
+				damage_cooldown	= buffer_read(buffer, buffer_u8);
 				var is_shooting	= buffer_read(buffer, buffer_u8);
+				alive			= (hp > 0);
 				if(is_shooting)
 				{
 					var shot_projectile			= instance_create_layer(x, y, "InstanceLayer", obj_projectile);
@@ -110,6 +116,22 @@ switch(data)
 		break;
 	#endregion
 	
+	#region player_damage
+	case DATA.player_damage:
+		var damage					= buffer_read(buffer, buffer_u16);
+		var player_dmg_id			= buffer_read(buffer, buffer_u8);
+		with obj_player
+		{
+			if(player_id = player_dmg_id)
+			{
+				show_debug_message("Yeet");
+				//damage_cooldown = 60;
+				scr_take_damage(damage, player_dmg_id);
+			}
+		}
+		break;
+	#endregion
+	
 	#region enemy_update
 	case DATA.enemy_update:
 		var enemy_count = buffer_read(buffer, buffer_u16);
@@ -143,6 +165,7 @@ switch(data)
 					hp				= enemy_hp;
 				}
 			}
+			
 			//enemy has to be created
 			if(!found_enemy)
 			{
@@ -150,6 +173,8 @@ switch(data)
 				new_enemy.enemy_id = enemy_server_id;
 			}
 		}
+		if(instance_exists(obj_debug_gui))
+				ds_map_copy(obj_debug_gui.custom, tracked_enemys);
 		break;
 	#endregion
 	
@@ -216,5 +241,23 @@ switch(data)
 		var yy	= buffer_read(buffer, buffer_s16);
 		instance_create_layer(xx, yy, "InstanceLayer", obj_portal);
 		break;
+	#endregion
+	
+	#region spawn_particle
+	case DATA.spawn_particle:
+	
+	break;
+	#endregion
+	
+	#region spawn_projectile
+	case DATA.spawn_projectile:
+		var xx				= buffer_read(buffer, buffer_s16);
+		var yy				= buffer_read(buffer, buffer_s16);
+		var dmg				= buffer_read(buffer, buffer_u16);
+		var client_id		= buffer_read(buffer, buffer_u8);
+		var new_instance	= instance_create_layer(xx, yy, "InstanceLayer", obj_blink_damage);
+		new_instance.damage = dmg;
+		scr_net_send_to_clients(buffer, client_id);
+	break;
 	#endregion
 }

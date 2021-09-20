@@ -18,7 +18,7 @@ surface_set_target(srf_lights);
 	var vy = obj_cam_contoller.y;
 	//draw all light instances 
 	with(par_lights)
-		draw_sprite_ext(sprite_index, image_index, x - vx + 160, y - vy + 90, image_xscale, image_yscale, image_angle, image_blend, image_alpha * lights_strength);
+		draw_sprite_ext(sprite_index, image_index, x - vx + 320, y - vy + 180, image_xscale, image_yscale, image_angle, image_blend, image_alpha * lights_strength);
 	
 	//reset gpu
 	gpu_set_tex_filter(false);
@@ -36,4 +36,4 @@ shader_set(shd_colour);
 shader_reset();
 
 //debug lighting surface
-	//draw_surface_ext(srf_lights, 0, 0, 1, 1, 0, c_white, 1);
+	draw_surface_ext(srf_lights, 0, 0, 1, 1, 0, c_white, 0.5);

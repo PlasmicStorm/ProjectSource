@@ -1,1 +1,1 @@
-custom = "";
+custom = ds_map_create();

@@ -11,7 +11,7 @@
 				show_error("Could not create server.", false);
 			else
 			{
-				room_goto(r_castle);
+				room_goto(r_test);
 			
 				is_server = true;
 			}
@@ -29,7 +29,7 @@
 			buffer_write(buffer, buffer_u8, DATA.heartbeat);
 			buffer_write(buffer, buffer_u8, ds_list_size(clients));
 			network_send_udp(server, server_ip, server_port, buffer, buffer_get_size(buffer));
-			room_goto(r_castle);
+			room_goto(r_level_forest);
 			connected = true;
 		}
 	}
@@ -41,7 +41,7 @@ if(!is_server && connected)
 	buffer_write(buffer, buffer_u8, ds_list_size(clients));
 	network_send_udp(server, server_ip, server_port, buffer, buffer_get_size(buffer));
 	if(instance_exists(obj_debug_gui))
-		obj_debug_gui.custom = string(	"heartbeat " + 
+		 /*obj_debug_gui.custom = string(	"heartbeat " + 
 										string(packetno) + 
 										" dest " + 
 										string(server_ip) + 
@@ -49,6 +49,7 @@ if(!is_server && connected)
 										string(server_port) + 
 										"\nFrom client " +
 										string(server));
+										*/
 	packetno++;
 	exit;
 }

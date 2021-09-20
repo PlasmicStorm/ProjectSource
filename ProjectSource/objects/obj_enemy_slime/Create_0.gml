@@ -1,18 +1,25 @@
 /// @description Initialize variables
 
-enemy_id		= instance_number(obj_enemy);
+//Enemy Type
+enemy_id		= scr_get_unique_enemy_id();
 enemy_name		= enemy_type.slime;
 
+//Stats
 max_hp			= 10;
 hp				= max_hp;
 slime_cooldown	= floor(random_range(0, 100));
-x_speed = 0;
-y_speed = 0;
 
+
+//Pathfinding
+target_player		= noone;
+target_direction	= 0;
+target_range		= 300;
+
+//Shader timing
 time			= random_range(0, 100);
 strength		= 0.006;
 
-
+//Shader Data
 distort_tex		= sprite_get_texture(spr_bump, 0);
 tex_offset		= [-0.003, -0.003];
 u_distort_tex	= shader_get_sampler_index(shd_distort, "distort_tex");

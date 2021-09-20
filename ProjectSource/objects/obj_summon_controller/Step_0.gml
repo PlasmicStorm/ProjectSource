@@ -25,8 +25,10 @@ var buffer = buffer_create(instance_number(obj_enemy) * 13 + 3, buffer_fixed, 1)
 buffer_seek(buffer, buffer_seek_start, 0);
 buffer_write(buffer, buffer_u8, DATA.enemy_update);
 buffer_write(buffer, buffer_u16, instance_number(obj_enemy));
+var tracked_enemys = ds_map_create();
 with obj_enemy
 {
+	ds_map_add(tracked_enemys, enemy_id, enemy_name);
 	buffer_write(buffer, buffer_u16, enemy_id);
 	buffer_write(buffer, buffer_s16, x);
 	buffer_write(buffer, buffer_s16, y);
@@ -36,4 +38,6 @@ with obj_enemy
 	buffer_write(buffer, buffer_u8, hp);
 	buffer_write(buffer, buffer_u8, enemy_name);
 }
-scr_net_send_to_clients(buffer);
+if(instance_exists(obj_debug_gui))
+	ds_map_copy(obj_debug_gui.custom, tracked_enemys);
+scr_net_send_to_clients(buffer, -1);

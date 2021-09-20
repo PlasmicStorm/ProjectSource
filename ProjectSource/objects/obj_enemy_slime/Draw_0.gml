@@ -3,6 +3,7 @@ var size = 4;
 
 //Shader has to be drawn here to prevent shader glitches
 scr_draw_shadow(0.3, 0, -2, 0.3, false);
+//draw_text(x, y, string(enemy_id));
 
 shader_set(shd_distort);
 	texture_set_stage(u_distort_tex, distort_tex);

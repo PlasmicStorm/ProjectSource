@@ -1,7 +1,7 @@
 if(instance_exists(obj_player))
 {
 	
-	if(true)//keyboard_check(vk_tab))
+	if(keyboard_check(vk_tab))
 	{
 		var items					= obj_player.items;
 		var x_offset				= 0;
