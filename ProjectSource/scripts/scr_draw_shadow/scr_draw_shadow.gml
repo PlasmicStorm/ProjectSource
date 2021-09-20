@@ -15,7 +15,7 @@ function scr_draw_shadow(argument0, argument1, argument2, argument3, argument4) 
 	draw_sprite_ext(sprite_index, 
 					image_index, 
 					x + x_offset, 
-					y + sprite_height - (1 - size) * (sprite_height/2) + y_offset,  
+					y + y_offset,  
 					image_xscale, 
 					-1 * size * (invert ? -1 : 1),
 					0, 

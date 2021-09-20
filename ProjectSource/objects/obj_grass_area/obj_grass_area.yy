@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_grass_small",
-    "path": "sprites/spr_grass_small/spr_grass_small.yy",
+    "name": "spr_grass_area",
+    "path": "sprites/spr_grass_area/spr_grass_area.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,6 +22,8 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

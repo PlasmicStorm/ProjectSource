@@ -1,4 +1,8 @@
 /// @description Insert description here
+
+draw_text(32, 32, "depth: " + string(obj_player.depth));
+
+
 var xx = 1;
 if(instance_exists(obj_player))
 {

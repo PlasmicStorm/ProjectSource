@@ -1,3 +1,5 @@
+depth = room_height-y;
+
 #region Health
 	//Check if player is local
 	if(!obj_controller.is_server) 

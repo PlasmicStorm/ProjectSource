@@ -1,3 +1,5 @@
+depth = room_height-y;
+
 //Check if player is alive
 if(!alive)
 {
